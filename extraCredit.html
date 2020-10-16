@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>extraCredit</title>
+<script>
+window.onload=function()
+{
+	document.getElementById("button").onclick = function()
+	{
+		myBtn = document.getElementById("button");
+		input1 = document.getElementById("txtBox1").value;
+		input2 = document.getElementById("txtBox2").value;
+		if(myBtn.value=="->")
+			{
+				myBtn.value = "<-";
+				document.getElementById("txtBox2").value = input1;
+				document.getElementById("txtBox1").value = null;
+			}
+			else
+			{
+				myBtn.value = "->";
+				document.getElementById("txtBox2").value = null;
+				document.getElementById("txtBox1").value = input2;
+			}
+	}
+}
+</script>
+</head>
+
+<body>
+	<form id="form1">
+		<input type="text" id="txtBox1" name="txt-box1">
+		<input type="button" id="button" name="button" value="->">
+		<input type="text" id="txtBox2" name="txt-box2">
+	</form>
+</body>
+</html>
